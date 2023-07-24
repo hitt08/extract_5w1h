@@ -20,7 +20,7 @@ from giveme5w1h.preprocessor import PreprocessorSpacy,remove_unserializable_resu
 from giveme5w1h.extractor import MasterExtractor
 from utils.data_utils import read_json_dump,read,write,write_dict_dump,load_config
 
-
+import nltk
 
 log=logging.getLogger(__name__)
 
@@ -343,6 +343,9 @@ if __name__ == "__main__":
     config = load_config()
     os.environ["NLTK_DATA"]=config.nltk_dir
     os.environ["NEURALCOREF_CACHE"] = config.neural_coref_dir
+
+    nltk.data.path.append(config.nltk_dir)
+
 
 
     run_5w1h_extract(n_processes=args.n_processes, nlp_model=args.nlp_model, use_gpu=args.use_gpu, force=args.force,

@@ -6,9 +6,9 @@ import logging
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 import argparse
-from .utils.data_utils import write_dict,read_dict,read_dict_dump,write, read,read_parts, load_config, write_dict_dump
-from .utils.vectorise import sbert_vectorise, reduce_dim
-from .utils.tokenize import Tokenizers
+from utils.data_utils import write_dict,read_dict,read_dict_dump,write, read,read_parts, load_config, write_dict_dump
+from utils.vectorise import sbert_vectorise, reduce_dim
+from utils.tokenize import Tokenizers
 
 #TFIDF Vectorize
 def tfidf_vectorize(doc_ids, doc_data, max_df=0.95, nltk_dir="/app/nltk_data", lsa=True, lsa_dim=200):

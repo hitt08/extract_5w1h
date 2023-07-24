@@ -11,3 +11,4 @@ giveme5w1h
 geopy==1.13.0
 protobuf==3.19.6
 cython==0.29.30
+pytest
