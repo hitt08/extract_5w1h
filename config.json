@@ -1,0 +1,20 @@
+{
+  "parent":      {
+                    "source_dir"      : "./data/",
+                    "target_dir"      : "./data/target",
+                    "nltk_dir"        : "./data/nltk_data",
+                    "neural_coref_dir": "./neuralcoref_cache"
+                 },
+
+   "dependents": {
+                    "emb_dir"                     : {"parent": "target_dir",  "name": "embeddings"},
+                    "data5w1h_dir"                : {"parent": "target_dir",  "name": "5w1h"},
+
+                    "passage_dict_file"           : {"parent": "source_dir",  "name": "passages.jsonl.gz"},
+                    "passage_docids_file"         : {"parent": "source_dir",  "name": "passage_doc_ids.txt.gz"},
+                    "data5w1h_dict_file"          : {"parent": "data5w1h_dir","name": "data_5w1h.json.gz"},
+                    "entity_dict_file"            : {"parent": "data5w1h_dir","name": "who_where_entities.json.gz"},
+                    "data5w1h_docids_file"        : {"parent": "data5w1h_dir","name": "data_5w1h_docids.txt.gz"},
+                    "data5w1h_parts_file"         : {"parent": "data5w1h_dir","name": "data_5w1h_parts.txt"}
+                }
+}

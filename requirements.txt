@@ -1,0 +1,13 @@
+pandas
+python_dateutil >= 2.6.1
+numpy==1.22.4
+scikit-learn == 0.22.2.post1
+torch
+transformers
+sentence-transformers
+spacy==2.3.7
+benepar
+giveme5w1h
+geopy==1.13.0
+protobuf==3.19.6
+cython==0.29.30
